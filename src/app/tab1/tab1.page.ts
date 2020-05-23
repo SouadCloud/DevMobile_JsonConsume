@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +8,15 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  books : any = [];
+
+  constructor(private http : HttpClient) {
+
+    this.http.get("assets/books.json").subscribe (data=>{
+
+      this.books = data;
+      
+    })
+  }
 
 }

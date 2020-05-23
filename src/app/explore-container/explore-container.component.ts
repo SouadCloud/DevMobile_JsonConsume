@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-explore-container',
@@ -10,6 +11,8 @@ export class ExploreContainerComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    
+  }
 
 }
